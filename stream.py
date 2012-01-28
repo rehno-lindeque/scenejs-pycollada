@@ -152,7 +152,7 @@ class ScenejsPrettyJavascriptStream:
             self.streamobj.write("SceneJS.createScene({\n")
         for s in self._pretty_print(node, 1):
             self.streamobj.write(s)
-        self.streamobj.write("};\n" if options['libraries_only'] else ");\n")
+        self.streamobj.write("};\n" if options['libraries_only'] else "});\n")
 
 class ScenejsBinaryStream:
     """Wraps a stream object in order to produce JavaScript code (which creates all nodes in the file)"""
